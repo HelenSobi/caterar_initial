@@ -545,8 +545,12 @@ background-color:#292727;
     margin-bottom:0 !important;
 }
 .nav-pills .nav-item .active {
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid #EDE7F6;
     padding-bottom: 0 !important;
+}
+.nav-pills.menuPage-nav-pills li a.active{
+    border-bottom: 2px solid #EDE7F6;
+    padding-bottom: 0.5rem !important;
 }
 @media (max-width: 992px) {
     .navbar-dark{
@@ -682,19 +686,20 @@ button.slide_from_top::after {
     font-size: 1rem;
     background: var(--primary);
     color: #fff;
-    border: 0.25rem solid var(--primary);
+    border: 1px solid var(--primary);
     padding: 0.85em 0.75em;
-    margin: 1rem;
+    
     position: relative;
     z-index: 1;
     overflow: hidden;
   }
   button:hover {
-    color: var(--primary);
+    color:#000;
   }
   button::after {
+    
     content: "";
-    background: #ecf0f1;
+    background: #EDE7F6;
     position: absolute;
     z-index: -1;
     padding: 0.85rem 0.75rem;
