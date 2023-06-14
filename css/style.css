@@ -1,6 +1,7 @@
+
 /********** Template CSS **********/
 :root {
-    --primary: #880E4F;
+    --primary: #BB8ae5;
     --light: #EEEEEE;
     --dark: #424242;
     
@@ -16,7 +17,7 @@
     src: url('/fonts/Radens.ttf') format('truetype');
   } */
 .bg-topheader{
-background-color:#F5F5F5;
+background-color:#292727;
 }
 .ff-secondary {
     /* font-family: 'Pacifico', cursive; */
@@ -102,7 +103,7 @@ background-color:#F5F5F5;
     margin-left: 25px;
     padding: 35px 0;
     font-size: 17px;
-    color: var(--dark) !important;
+    color:#fff;
     /* text-transform: uppercase; */
     font-weight: 500;
     outline: none;
@@ -115,7 +116,8 @@ background-color:#F5F5F5;
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: var(--primary) !important;
+    /* color: var(--primary) !important; */
+    color:#fff;
 }
 
 .navbar-dark .navbar-brand img {
@@ -163,13 +165,13 @@ background-color:#F5F5F5;
         top: 0;
         left: 0;
         z-index: 999;
-        background: #EEEEEE !important;
-        /* background: transparent !important; */
+        /* background: #EEEEEE !important; */
+        background: transparent !important;
     }
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: #EEEEEE !important;
+        background: #212121 !important;
     }
 }
 
@@ -186,6 +188,24 @@ background-color:#F5F5F5;
     animation: imgRotate 50s linear infinite;
 }
 
+/* Menu Header */
+.menu-header,.service-header{
+    height:400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.service-header{
+    
+    background: url(../img/banner-sevces-1.jpg);
+    
+}
+.menu-header h1.section-title, .service-header h1.section-title{
+    font-size:5rem;
+}
+.menu-header{
+    background: url(../img/banner-menu-1.jpg);
+}
 @keyframes imgRotate { 
     100% { 
         transform: rotate(360deg); 
@@ -505,17 +525,33 @@ background-color:#F5F5F5;
 /*edited on 1/6/23 */
 .top-nav-titles {
  font-size:.9rem;
+ color:#ffffff;
 }
 .top-nav-titles ul li{
     width:20%;
+    font-family: 'Nunito',sans-serif;
    }
 /*edited 2/5/23 */
 .bg-new-grey{
     background-color:#FAFAFA ;
   }
+  .nav-pills.menu-nav-pills li.nav-item{
+    margin-bottom: 0.5rem;
+    padding:0.5rem;
+    border: 1px solid #f6d2e5;
+    background-color: #fdf0f7
+}
+.nav-pills.menu-nav-pills li.nav-item h6{
+    margin-bottom:0 !important;
+}
+.nav-pills .nav-item .active {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0 !important;
+}
 @media (max-width: 992px) {
     .navbar-dark{
-        background: #EEEEEE !important;
+       /* position:absolute; */
+        background: #000 !important;
     }
     .top-nav-titles ul.top-nav-disp-4{
         display:none;
@@ -524,11 +560,18 @@ background-color:#F5F5F5;
         width:100%;
     }
     /*** Food Menu ***/
-    .nav-pills .nav-item{
-        padding-bottom: 0.5rem;
+    .nav-pills li.nav-item{
+        margin-bottom: 0.5rem;
+        margin-right: 1rem;
+        border: 1px solid #D1C4E9;
+        background-color: #EDE7F6;
     }
-    .nav-pills .nav-item .active {
-        border-bottom: 1px solid var(--primary);
+    .nav-pills li.nav-item h6{
+        padding:.5rem;
+        margin-bottom:0 !important;
+    }
+    .nav-pills li.nav-item .active {
+        border-bottom: 2px solid var(--primary);
         
     }
 }
@@ -537,11 +580,19 @@ background-color:#F5F5F5;
         display:none;
     }
     /*** Food Menu ***/
-    .nav-pills .nav-item{
-        
+    .nav-pills li.nav-item{
+      
+        margin-right: 2rem;
+        padding-left:1rem;
+    }
+    ul.nav-pills li:last-child {
+        margin-right: 0;
+    }
+    ul.nav-pills li:last-child {
+        padding-left:0;
     }
     .nav-pills .nav-item .active {
-        border-bottom: 2px solid var(--primary);
+        border-bottom: 4px solid var(--primary);
         padding-bottom: 1rem;
     }
     
@@ -559,8 +610,8 @@ background-color:#F5F5F5;
     transition: .5s;
 }
 .category-item .bg-lightcolor{
-    background-color: #FCE4EC;
-    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    background-color: #B39DDB;
+    box-shadow: 0 6px 13px rgb(43 43 43 / 70%);
 }
 .category-item:hover img {
     transform: scale(1.15);
@@ -580,6 +631,10 @@ background-color:#F5F5F5;
 } */
 .category-item h5{
     font-weight: 600 !important;
+}
+.category-item h5 a {
+    color:#000;
+    
 }
 /* edited 4.6.23 */
 
@@ -603,6 +658,48 @@ height:150px;
 .why-caterar img{
     /* width:70% !important;*/
 } 
+.border-light-purple{
+    border:2px solid #fce4ec
+}
+/* Button Sliding */
+button.slide_from_top::after {
+    left: 0;
+    right: 0;
+    top: -100%;
+    bottom: 100%;
+  }
+  button[class^="slide"]::after {
+    transition: all 0.35s;
+  }
+  button[class^="slide"]:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.35s;
+  }
+  button {
+    font-size: 1rem;
+    background: var(--primary);
+    color: #fff;
+    border: 0.25rem solid var(--primary);
+    padding: 0.85em 0.75em;
+    margin: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  button:hover {
+    color: var(--primary);
+  }
+  button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85rem 0.75rem;
+    display: block;
+  }
 /* .navbar-brand {
   transform: translateX(-50%);
   left: 50%;
